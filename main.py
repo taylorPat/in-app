@@ -32,3 +32,7 @@ class UserDb(User):
 @app.get("/", response_class=HTMLResponse)
 def get_home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request, "title": "FriendConnect"})
+
+@app.get("/login", response_class=HTMLResponse)
+def get_home(request: Request):
+    return templates.TemplateResponse("logins.html", {"request": request, "title": "FriendConnect - Login", "invalid": True, "Herbert": True})
